@@ -1,15 +1,26 @@
 #include <iostream>
 #include <iomanip>
-
+#include <vector>
 #include <chrono>
 
 using namespace std;
 
 int fib(int N)
 {
-  //////////////////////////////////////////
-  // INSERT ITERATIVE IMPLEMENTATION HERE //
-  //////////////////////////////////////////
+  // Used algorithm from https://geeksforgeeks.org/program-for-the-nth-fibonacci-number
+  int a=0, b=1, c, i = 0;
+
+  if(N == 0){
+    return a;
+  }
+
+  for(i = 2; i <= N; i++){
+    c = a + b;
+    a = b;
+    b = c;
+  }
+  return b;
+
 }
 
 int main ()
