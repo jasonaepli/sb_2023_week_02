@@ -5,13 +5,18 @@
 
 using namespace std;
 
-int64_t fact(int N)
+int64_t fact(int64_t N)
 {
-  //////////////////////////////////////////
-  // INSERT RECURSIVE IMPLEMENTATION HERE //
-  //////////////////////////////////////////
 
-  // Pay attention to the return type!
+  if(N == 0){
+    int64_t result = 1;
+    return result;
+  }else{
+    int64_t result = N;
+
+    return fact(result-1)*result;
+  }
+
 }
 
 int main ()
