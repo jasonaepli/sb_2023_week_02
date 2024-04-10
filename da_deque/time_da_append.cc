@@ -4,9 +4,6 @@
 #include <chrono>
 #include <vector>
 
-//////////////////////////////////
-// ADD NECESSARY #includes HERE //
-//////////////////////////////////
 
 using namespace std;
 
@@ -20,18 +17,14 @@ int main ()
   for (int32_t run_idx=0; run_idx<num_runs; ++run_idx)
   {
     time_data.push_back(vector<int32_t>(num_elems, 0));
-
-    ////////////////////////////////////////////////////////
-    // CREATE AN EMPTY DYNAMIC ARRAY NAMED container HERE //
-    ////////////////////////////////////////////////////////
+    
+    vector<int32_t> container;
 
     for (int32_t elem_idx=0; elem_idx<num_elems; ++elem_idx)
     {
       auto start = chrono::high_resolution_clock::now();
 
-      //////////////////////////////////////////////////////
-      // INSERT CODE TO APPEND elem_idx TO container HERE //
-      //////////////////////////////////////////////////////
+      container.push_back(elem_idx);
 
       auto end = chrono::high_resolution_clock::now();
       auto elapsed__ns = chrono::duration_cast<chrono::nanoseconds>(
